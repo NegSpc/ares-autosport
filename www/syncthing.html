@@ -37,10 +37,12 @@
         recognise for others on the team<br>
         <img src="https://i.imgur.com/lqexytF.gif">
       </li>
+      <br>
       <li>Go to <code>Add Remote Device</code> Add the device id for one of the team servers and mark it as an
         introducer<br>
         <img src="https://i.imgur.com/Iomh06h.gif">
       </li>
+      <br>
       <li>Send a message to the team member that owns the server and ask them to accept your connection. The team member
         will then share the setups folder with you</li>
       <li>Find the prompt for the iRacing Setups share and select <code>Add</code></li>
@@ -51,15 +53,25 @@
       <li>Select <code>Save</code><br>
         <img src="https://i.imgur.com/dxGfJGI.gif">
       </li>
+      <br>
       <li>The teams setups will now sync to you, this may take a short moment</li>
       <li>Select the share and then select <code>Edit</code></li>
-      <li>Open the <code>Ignore Patterns</code> tab, activate <code>Add ignore patterns</code> and past the following
-        into
-        the text field:
-        <pre><code>#include .stglobalignore
+      <li>Open the <code>Ignore Patterns</code> tab, select to enable <code>ignore patterns</code>. Click save and when prompted, add the following into the text field:
+        <pre><code>// Include .sto files
+!*.sto
+// Include FolderGenerator
+!*.ps1
+!*.json
+// Allow syncthing needed files
+!/.stfolder
+!.stignore
+// Ignore everything else
+*
         </code></pre>
-        <img src="https://i.imgur.com/aD2lVUg.gif">
+        <img src="https://i.imgur.com/9MvgpEp.png">
       </li>
+      <br>
+      <li> Let it do the initial sync and you should be all good. Restore any of your car specific configurations if you backed them up.</li>
     </ol>
     <h2 id="post-setup-steps">Post Setup Steps</h2>
     <p>At this point you should have synced the teams setups, your old setups still remain in the folder you renamed in
